@@ -1,0 +1,9 @@
+[submodule "public/reddwarfclient"]
+	path = public/reddwarfclient
+	url = git@github.com:stackforge/python-reddwarfclient.git
+[submodule "public/reddwarf-integration"]
+	path = public/reddwarf-integration
+	url = git@github.com:stackforge/reddwarf-integration.git
+[submodule "public/reddwarf"]
+	path = public/reddwarf
+	url = git@github.com:stackforge/reddwarf.git
