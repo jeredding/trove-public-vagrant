@@ -5,7 +5,9 @@ get started
 -------------
 git submodules:
 > $ git submodule init 
+>
 > $ vagrant up
+>
 > profit
 
 
