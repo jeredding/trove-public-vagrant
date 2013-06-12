@@ -4,7 +4,7 @@ cdb-public-vagrant
 get started
 -------------
 git submodules:
-> $ git submodule init 
+> $ git submodule update --init 
 >
 > $ vagrant up
 >
