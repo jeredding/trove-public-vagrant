@@ -3,8 +3,8 @@
 Vagrant.configure("2") do |config|
 #Vagrant::Config.run do |config|
   config.vm.hostname = 'mynode.clouddb.rackspace.net'
-  config.vm.box = "ubuntu12.04.1"
-  config.vm.box_url = "http://dl.dropbox.com/u/1537815/precise64.box"
+  config.vm.box = "ubuntu12.04.2"
+  config.vm.box_url = "https://dl.dropboxusercontent.com/u/165709740/boxes/precise64-vanilla.box"
   config.vm.provision :shell, :path => "bootstrap.sh"
 
 # network
@@ -19,12 +19,9 @@ Vagrant.configure("2") do |config|
 #  config.vm.customize do |vm|
 #    vm.memory_size = 1024
 #  end
+  config.vm.synced_folder "public/trove/", "/src/trove/", owner: "vagrant", group: "vagrant"
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--memory", "1512"]
   end
 
-#  config.vm.provision :puppet do |puppet|
-#    puppet.manifest_file = "site.pp"
-#    puppet.options = ["--fileserverconfig=/vagrant/fileserver.conf", "--verbose", "--debug" ]
-#  end
 end
